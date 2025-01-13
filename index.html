@@ -7,48 +7,66 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
       text-align: center;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container {
+      animation: fadeIn 2s;
     }
     h1 {
-      color: #d9534f;
+      color: #ffffff;
+      font-size: 3em;
+      margin: 0 0 20px 0;
     }
     p {
-      font-size: 18px;
-      color: #333;
+      font-size: 1.2em;
+      color: #ffffff;
     }
     button {
-      background-color: #5cb85c;
-      color: white;
+      background-color: #ffffff;
+      color: #ff6f61;
       border: none;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     button:hover {
-      background-color: #4cae4c;
+      background-color: #ff6f61;
+      color: #ffffff;
+      transform: scale(1.1);
     }
-    #message {
-      display: none;
-      margin-top: 20px;
-      color: #5cb85c;
-      font-size: 20px;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>عذراً يا جمانة 💖</h1>
-  <p>أعلم أنني أخطأت، وأريد أن أوضح لك كم أنا آسف.</p>
-  <button onclick="showMessage()">اضغطي هنا لقراءة رسالتي</button>
-  <div id="message">
-    <p>أحبك أكثر مما أستطيع وصفه، وأعدك أن أكون أفضل من أجلنا. 💕</p>
+  <div class="container">
+    <h1>عذراً يا جمانة 💖</h1>
+    <p>أعلم أنني أخطأت، وأريد أن أوضح لك كم أنا آسف.</p>
+    <button onclick="goToPage()">اضغطي هنا لرؤية المفاجأة</button>
   </div>
   <script>
-    function showMessage() {
-      document.getElementById("message").style.display = "block";
+    function goToPage() {
+      document.body.style.animation = "fadeOut 1s forwards";
+      setTimeout(() => {
+        window.location.href = "page2.html";
+      }, 1000);
     }
   </script>
 </body>

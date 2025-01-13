@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عذراً يا جمانة</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #d9534f;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4cae4c;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+      color: #5cb85c;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>عذراً يا جمانة 💖</h1>
+  <p>أعلم أنني أخطأت، وأريد أن أوضح لك كم أنا آسف.</p>
+  <button onclick="showMessage()">اضغطي هنا لقراءة رسالتي</button>
+  <div id="message">
+    <p>أحبك أكثر مما أستطيع وصفه، وأعدك أن أكون أفضل من أجلنا. 💕</p>
+  </div>
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
